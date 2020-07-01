@@ -1,0 +1,59 @@
+body
+{
+    background-color: blanchedalmond;
+}
+
+.container
+{
+    margin-top: 50px;
+    width: 25%;
+}
+
+form
+{
+    background: coral;
+    border: 2px solid rgb(136, 3, 3);
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+}
+
+#task
+{
+    width: 60%;
+    float: left;
+    margin-right: 5%;
+}
+
+ul li
+{
+    list-style: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: mintcream;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+
+ul li:hover
+{
+    background: beige;
+}
+
+ul li button
+{
+    border: 0;
+    padding: 5px 15px;
+    color: white;
+    font-size: 13px;
+    background: orangered;
+    position: relative;
+    left: 130px;
+    border-radius: 5px;
+}
+
+ul li button:hover
+{
+    background: tomato;
+}
+

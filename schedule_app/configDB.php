@@ -1,0 +1,4 @@
+<?php
+    $dsn = 'mysql:host=localhost;dbname=schedule';
+    $pdo = new PDO($dsn, 'root', 'root');
+?>
