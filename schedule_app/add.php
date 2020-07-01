@@ -1,15 +1,18 @@
 <?php
-    $task = $_POST['task'];
-    if ($task == '') {
-        echo 'Enter the task';
+    $task = trim($_POST['task']);
+    $date = trim($_POST['date']);
+
+    if (empty($task) || empty($date)) {
+        echo '<h2>Incorrect input</h2>';
         exit();
     }
 
     require 'configDB.php';
 
-    $sql = 'INSERT INTO tasks(task) VALUES(:task)';
+    $sql = 'INSERT INTO tasks(task, date) VALUES(:task, :date)';
+    $params = ['task' => $task, 'date' => $date];
     $query = $pdo->prepare($sql);
-    $query->execute(['task' => $task]);
+    $query->execute($params);
 
     header('Location: /');
 
